@@ -6,6 +6,7 @@ import { CssBaseline } from "@mui/material";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Toaster } from "react-hot-toast";
+import { UserLocationContextProvider } from "./context/UserLocationContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -18,7 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     >
       <CssBaseline />
       <Toaster position="bottom-right" reverseOrder={false} />
-      <App />
+      <UserLocationContextProvider>
+        <App />
+      </UserLocationContextProvider>
     </Auth0Provider>
   </React.StrictMode>
 );

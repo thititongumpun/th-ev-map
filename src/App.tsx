@@ -5,7 +5,7 @@ import { useGeolocation } from "@uidotdev/usehooks";
 import { LatLng } from "./types/LatLng";
 import { Button } from "@mui/material";
 import toast from "react-hot-toast";
-// import ResponsiveAppBar from "./components/Navbar";
+import { useUserLocationContext } from "./hooks/useUserLocationContext";
 
 const MapComponent = lazy(() => import("./components/MapComponent"));
 const ResponsiveAppBar = lazy(() => import("./components/Navbar"));
@@ -33,6 +33,8 @@ function LatLngEvent({ latLng }: { latLng: LatLng[] }) {
 }
 
 function App() {
+  const user = useUserLocationContext();
+  console.log(user?.email);
   const [isConnected, setIsConnected] = useState(socket.connected);
   const [messageEvents, setMessageEvents] = useState<string[]>([]);
   const { latitude, longitude, loading } = useGeolocation({
