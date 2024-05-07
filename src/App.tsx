@@ -73,7 +73,6 @@ function App() {
       <Button
         variant="contained"
         onClick={() => {
-          console.log(userId, latitude, longitude);
           socket.emit("location", { id: userId, latitude, longitude });
         }}
       >
