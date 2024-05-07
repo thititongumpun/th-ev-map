@@ -165,16 +165,18 @@ function ResponsiveAppBar() {
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
-                  <Button
-                    color="inherit"
-                    onClick={() =>
-                      logout({
-                        logoutParams: { returnTo: window.location.origin },
-                      })
-                    }
-                  ></Button>
                 </MenuItem>
               ))}
+              <Button
+                color="inherit"
+                onClick={() =>
+                  logout({
+                    logoutParams: { returnTo: window.location.origin },
+                  })
+                }
+              >
+                <Typography textAlign="center">Logout</Typography>
+              </Button>
             </Menu>
           </Box>
         </Toolbar>

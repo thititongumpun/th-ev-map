@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       }}
     >
       <CssBaseline />
-      <Toaster position="bottom-right" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <UserLocationContextProvider>
         <App />
       </UserLocationContextProvider>

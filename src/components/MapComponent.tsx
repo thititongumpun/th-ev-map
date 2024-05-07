@@ -17,8 +17,8 @@ type Props = {
 
 function MapComponent({ lat, lng }: Props) {
   const [viewState, setViewState] = useState({
-    longitude: Number(lat),
-    latitude: Number(lng),
+    longitude: 100.523186,
+    latitude: 13.736717,
     zoom: 3.5,
     bearing: 0,
     pitch: 0,

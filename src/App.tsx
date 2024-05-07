@@ -1,59 +1,37 @@
-import { useEffect, useState, lazy } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { socket } from "./socket";
 import ConnectionManager from "./ConnectionManager";
 import { useGeolocation } from "@uidotdev/usehooks";
-import { LatLng } from "./types/LatLng";
+// import { LatLng } from "./types/LatLng";
 import { Button } from "@mui/material";
 import toast from "react-hot-toast";
 import { useUserLocationContext } from "./hooks/useUserLocationContext";
+import LoadingSkelation from "./components/LoadingSkelation";
 
 const MapComponent = lazy(() => import("./components/MapComponent"));
 const ResponsiveAppBar = lazy(() => import("./components/Navbar"));
 
-function MessageEvent({ msgs }: { msgs: string[] }) {
-  return (
-    <ul>
-      {msgs.map((event, index) => (
-        <li key={index}>{event}</li>
-      ))}
-    </ul>
-  );
-}
-
-function LatLngEvent({ latLng }: { latLng: LatLng[] }) {
-  return (
-    <ul>
-      {latLng.map((event, index) => (
-        <li key={index}>
-          {event.lat} {event.lng}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 function App() {
   const user = useUserLocationContext();
-  console.log(user?.email);
+  const userId = user?.sub?.split("|")[1];
   const [isConnected, setIsConnected] = useState(socket.connected);
-  const [messageEvents, setMessageEvents] = useState<string[]>([]);
   const { latitude, longitude, loading } = useGeolocation({
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0,
   });
 
-  const [latLng, setLatLng] = useState<LatLng[]>([
-    {
-      lat: latitude,
-      lng: longitude,
-    },
-  ]);
+  // const [latLng, setLatLng] = useState<LatLng[]>([
+  //   {
+  //     lat: latitude,
+  //     lng: longitude,
+  //   },
+  // ]);
 
   useEffect(() => {
-    if (!loading) {
-      setLatLng([{ lat: latitude, lng: longitude }]);
-    }
+    // if (!loading) {
+    //   setLatLng([{ lat: latitude, lng: longitude }]);
+    // }
 
     function onConnect() {
       setIsConnected(true);
@@ -65,24 +43,18 @@ function App() {
       toast.success("Successfully disconnected");
     }
 
-    function onMessageEvent(value: string) {
-      setMessageEvents((previous) => [...previous, value]);
-    }
-
-    function onLocationEvent(location: LatLng) {
-      setLatLng((previous) => [...previous, location]);
-    }
+    // function onLocationEvent(location: LatLng) {
+    //   setLatLng((previous) => [...previous, location]);
+    // }
 
     socket.on("connect", onConnect);
     socket.on("disconnect", onDisconnect);
-    socket.on("msg", onMessageEvent);
-    socket.on("location", onLocationEvent);
+    // socket.on("location", onLocationEvent);
 
     return () => {
       socket.off("connect", onConnect);
       socket.off("disconnect", onDisconnect);
-      socket.off("msg", onMessageEvent);
-      socket.on("off", onLocationEvent);
+      // socket.on("off", onLocationEvent);
     };
   }, [latitude, loading, longitude]);
 
@@ -91,8 +63,6 @@ function App() {
       <ResponsiveAppBar />
       <p>State: {"" + isConnected}</p>
       <ConnectionManager />
-      <MessageEvent msgs={messageEvents} />
-      <LatLngEvent latLng={latLng} />
       <button
         onClick={() => {
           socket.emit("msg", { message: "from client" });
@@ -103,12 +73,15 @@ function App() {
       <Button
         variant="contained"
         onClick={() => {
-          socket.emit("location", { latitude, longitude });
+          console.log(userId, latitude, longitude);
+          socket.emit("location", { id: userId, latitude, longitude });
         }}
       >
         Send Location
       </Button>
-      <MapComponent lat={latitude as number} lng={longitude as number} />
+      <Suspense fallback={<LoadingSkelation loading />}>
+        <MapComponent lat={latitude as number} lng={longitude as number} />
+      </Suspense>
     </>
   );
 }
