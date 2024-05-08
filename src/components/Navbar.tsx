@@ -13,6 +13,8 @@ import { Tooltip } from "@mui/material";
 import { MenuItem } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useAuth0 } from "@auth0/auth0-react";
+import Battery from "./Battery";
+import { useBattery } from "@uidotdev/usehooks";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -25,6 +27,8 @@ function ResponsiveAppBar() {
     null
   );
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+
+  const { level, charging, chargingTime, dischargingTime } = useBattery();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -139,11 +143,19 @@ function ResponsiveAppBar() {
                 Login
               </Button>
             ) : (
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt={user?.name} src={user?.picture} />
-                </IconButton>
-              </Tooltip>
+              <>
+                <Tooltip title="Open settings">
+                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                    <Avatar alt={user?.name} src={user?.picture} />
+                    <Battery
+                      level={`${(level! * 100).toFixed(0)} %`}
+                      charging={charging}
+                      chargingTime={chargingTime}
+                      dischargingTime={dischargingTime}
+                    />
+                  </IconButton>
+                </Tooltip>
+              </>
             )}
 
             <Menu
