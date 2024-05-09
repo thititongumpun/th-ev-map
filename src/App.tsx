@@ -7,6 +7,7 @@ import { Button } from "@mui/material";
 import toast from "react-hot-toast";
 import { useUserLocationContext } from "./hooks/useUserLocationContext";
 import LoadingSkelation from "./components/LoadingSkelation";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const MapComponent = lazy(() => import("./components/MapComponent"));
 const ResponsiveAppBar = lazy(() => import("./components/Navbar"));
@@ -81,6 +82,11 @@ function App() {
       <Suspense fallback={<LoadingSkelation loading />}>
         <MapComponent lat={latitude as number} lng={longitude as number} />
       </Suspense>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/xd" element={<LoadingSkelation loading={true} />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
