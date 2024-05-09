@@ -138,6 +138,12 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+            <Battery
+              level={`${(level! * 100).toFixed(0)} %`}
+              charging={charging}
+              chargingTime={chargingTime}
+              dischargingTime={dischargingTime}
+            />
             {!isAuthenticated ? (
               <Button color="inherit" onClick={() => loginWithRedirect()}>
                 Login
@@ -147,12 +153,6 @@ function ResponsiveAppBar() {
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Avatar alt={user?.name} src={user?.picture} />
-                    <Battery
-                      level={`${(level! * 100).toFixed(0)} %`}
-                      charging={charging}
-                      chargingTime={chargingTime}
-                      dischargingTime={dischargingTime}
-                    />
                   </IconButton>
                 </Tooltip>
               </>
