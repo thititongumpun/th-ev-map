@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Map, {
   Marker,
   GeolocateControl,
@@ -8,12 +8,12 @@ import Map, {
   Popup,
 } from "react-map-gl";
 import { LatLng } from "../types/LatLng";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-
-import DATA from '../data.json';
 import Pin from "./Pin";
 import { Result } from "../types/ApiResponse";
+import { useQuery } from "react-query";
+import { getStations } from "../lib/getStation";
 
 type Props = {
   latLng?: LatLng;
@@ -22,30 +22,35 @@ type Props = {
 };
 
 function MapComponent({ lat, lng }: Props) {
-  const [viewState, setViewState] = useState({
-    longitude: 100.523186,
-    latitude: 13.736717,
-    zoom: 3.5,
-    bearing: 0,
-    pitch: 0,
+  const [viewState, setViewport] = useState({
+    latitude: lat as number,
+    longitude: lng as number,
+    zoom: 14
   });
+
+  useEffect(() => {
+    setViewport({
+      ...viewState,
+      latitude: lat as number,
+      longitude: lng as number,
+    });
+  }, [lat, lng, viewState]);
+
+  const { data } = useQuery("stations", () =>
+    getStations({ lat: lat as number, lng: lng as number })
+  );
 
   const [popupInfo, setPopupInfo] = useState<Result | null>(null);
 
-  // "lat": 13.840764,
-  //       "lon": 100.53369
-
   const pins = useMemo(
     () =>
-      DATA.results.map((result, index) => (
+      data?.results.map((result, index) => (
         <Marker
           key={`marker-${index}`}
           latitude={result.position.lat}
           longitude={result.position.lon}
           anchor="bottom"
-          onClick={e => {
-            // If we let the click event propagates to the map, it will immediately close the popup
-            // with `closeOnClick: true`
+          onClick={(e) => {
             e.originalEvent.stopPropagation();
             setPopupInfo(result as Result);
           }}
@@ -53,7 +58,7 @@ function MapComponent({ lat, lng }: Props) {
           <Pin size={20} />
         </Marker>
       )),
-    []
+    [data?.results]
   );
 
   return (
@@ -65,9 +70,9 @@ function MapComponent({ lat, lng }: Props) {
       }}
     >
       <Map
-        mapLib={import("mapbox-gl")}
         {...viewState}
-        onMove={(evt) => setViewState(evt.viewState)}
+        mapLib={import("mapbox-gl")}
+        onMove={(evt) => setViewport(evt.viewState)}
         mapboxAccessToken={import.meta.env.VITE_MAPBOXACCESS_TOKEN}
         style={{ height: 600 }}
         mapStyle="mapbox://styles/mapbox/streets-v9"
@@ -80,7 +85,11 @@ function MapComponent({ lat, lng }: Props) {
           <img src="/car.png" width={50} height={50} />
         </Marker>
 
-        <GeolocateControl position="top-left" />
+        <GeolocateControl
+          position="top-left"
+          positionOptions={{ enableHighAccuracy: true }}
+          trackUserLocation
+        />
         <FullscreenControl position="top-left" />
         <NavigationControl position="top-left" />
         <ScaleControl />
@@ -94,13 +103,14 @@ function MapComponent({ lat, lng }: Props) {
             longitude={Number(popupInfo.position.lon)}
             onClose={() => setPopupInfo(null)}
           >
-            <div>
-              {popupInfo.address.freeformAddress}, {popupInfo.info} |{' '}
-            </div>
-            <img width="100%" src={popupInfo.dist.toFixed(0)} />
+            <Typography>{popupInfo.poi.name}</Typography>
+            <Typography>{popupInfo.address.freeformAddress}</Typography>
+            {popupInfo.chargingPark?.connectors &&
+              popupInfo.chargingPark?.connectors.map((connector, idx) => (
+                <Typography key={idx}>{connector.connectorType}</Typography>
+              ))}
           </Popup>
         )}
-        
       </Map>
     </Box>
   );
