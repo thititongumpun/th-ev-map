@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Map, {
   Marker,
   GeolocateControl,
@@ -25,16 +25,8 @@ function MapComponent({ lat, lng }: Props) {
   const [viewState, setViewport] = useState({
     latitude: lat as number,
     longitude: lng as number,
-    zoom: 14
+    zoom: 14,
   });
-
-  useEffect(() => {
-    setViewport({
-      ...viewState,
-      latitude: lat as number,
-      longitude: lng as number,
-    });
-  }, [lat, lng, viewState]);
 
   const { data } = useQuery("stations", () =>
     getStations({ lat: lat as number, lng: lng as number })
