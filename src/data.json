@@ -1,0 +1,806 @@
+{
+  "results": [
+    {
+      "type": "POI",
+      "id": "rhpWTHoKvw01u5Fob8qYDA",
+      "score": 99.1837692261,
+      "dist": 816.225858,
+      "info": "search:ev:24236b49-9cce-399a-45c7-36c400153b86",
+      "poi": {
+        "name": "อีแวท",
+        "phone": "+66 2 968 8064",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "municipalitySubdivision": "ตลาดขวัญ",
+        "municipality": "นนทบุรี",
+        "countrySecondarySubdivision": "อำเภอ เมืองนนทบุรี",
+        "countrySubdivision": "จังหวัด นนทบุรี",
+        "countrySubdivisionName": "จังหวัด นนทบุรี",
+        "countrySubdivisionCode": "12",
+        "postalCode": "11000",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "ตำบล/แขวงตลาดขวัญ อำเภอ/เขตตลาดขวัญ จังหวัด นนทบุรี 11000",
+        "localName": "ตลาดขวัญ"
+      },
+      "position": {
+        "lat": 13.84674,
+        "lon": 100.523033
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.84764,
+          "lon": 100.52211
+        },
+        "btmRightPoint": {
+          "lat": 13.84584,
+          "lon": 100.52396
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 50,
+            "voltageV": 400,
+            "currentA": 125,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type2Outlet",
+            "ratedPowerKW": 7,
+            "voltageV": 230,
+            "currentA": 32,
+            "currentType": "AC1"
+          },
+          {
+            "connectorType": "Chademo",
+            "ratedPowerKW": 50,
+            "voltageV": 400,
+            "currentA": 125,
+            "currentType": "DC"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "if5JfSIJGebM3qHdsne3eg",
+      "score": 98.0290527344,
+      "dist": 1970.941918,
+      "info": "search:ev:1d2657c5-9267-34e0-77b8-c11400153b86",
+      "poi": {
+        "name": "อีวี สเตชั่น พลัส",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "149",
+        "streetName": "ทางพิเศษศรีรัช",
+        "municipalitySubdivision": "บางซื่อ",
+        "municipality": "กรุงเทพมหานคร",
+        "municipalitySecondarySubdivision": "วงศ์สว่าง",
+        "countrySecondarySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivisionName": "กรุงเทพมหานคร",
+        "countrySubdivisionCode": "10",
+        "postalCode": "10800",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "149, ทางพิเศษศรีรัช, ตำบล/แขวงบางซื่อ อำเภอ/เขตวงศ์สว่าง กรุงเทพมหานคร 10800",
+        "localName": "วงศ์สว่าง"
+      },
+      "position": {
+        "lat": 13.840764,
+        "lon": 100.53369
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.84166,
+          "lon": 100.53276
+        },
+        "btmRightPoint": {
+          "lat": 13.83986,
+          "lon": 100.53462
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 120,
+            "voltageV": 450,
+            "currentA": 255,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type2CableAttached",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          },
+          {
+            "connectorType": "Chademo",
+            "ratedPowerKW": 90,
+            "voltageV": 450,
+            "currentA": 200,
+            "currentType": "DC"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "Qv-dySSXBpAMK-l0DGYkdQ",
+      "score": 97.5773696899,
+      "dist": 2422.632466,
+      "info": "search:ev:f4c105f5-a78a-3808-514d-3fda00153b86",
+      "poi": {
+        "name": "อีเอ เอนนี่แวร์",
+        "phone": "+66 2 026 6133",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "1215",
+        "streetName": "ถนนกรุงเทพ-นนทบุรี",
+        "municipalitySubdivision": "บางซื่อ",
+        "municipality": "กรุงเทพมหานคร",
+        "municipalitySecondarySubdivision": "วงศ์สว่าง",
+        "countrySecondarySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivisionName": "กรุงเทพมหานคร",
+        "countrySubdivisionCode": "10",
+        "postalCode": "10800",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "1215, ถนนกรุงเทพ-นนทบุรี, ตำบล/แขวงบางซื่อ อำเภอ/เขตวงศ์สว่าง กรุงเทพมหานคร 10800",
+        "localName": "วงศ์สว่าง"
+      },
+      "position": {
+        "lat": 13.827205,
+        "lon": 100.529513
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.8281,
+          "lon": 100.52859
+        },
+        "btmRightPoint": {
+          "lat": 13.82631,
+          "lon": 100.53044
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 90,
+            "voltageV": 450,
+            "currentA": 200,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type2Outlet",
+            "currentType": "UNKNOWN"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "tsrgyETmUoHzegFgebZODw",
+      "score": 97.4751968384,
+      "dist": 2524.801423,
+      "info": "search:ev:c21b113c-f5e4-3bbb-77e9-a87c00153b86",
+      "poi": {
+        "name": "อีเอ เอนนี่แวร์",
+        "phone": "+66 2 026 6133",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "123",
+        "streetName": "ถนนวงศ์สว่าง",
+        "municipalitySubdivision": "บางซื่อ",
+        "municipality": "กรุงเทพมหานคร",
+        "municipalitySecondarySubdivision": "วงศ์สว่าง",
+        "countrySecondarySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivisionName": "กรุงเทพมหานคร",
+        "countrySubdivisionCode": "10",
+        "postalCode": "10800",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "123, ถนนวงศ์สว่าง, ตำบล/แขวงบางซื่อ อำเภอ/เขตวงศ์สว่าง กรุงเทพมหานคร 10800",
+        "localName": "วงศ์สว่าง"
+      },
+      "position": {
+        "lat": 13.822754,
+        "lon": 100.522636
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.82365,
+          "lon": 100.52171
+        },
+        "btmRightPoint": {
+          "lat": 13.82185,
+          "lon": 100.52356
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2Outlet",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          },
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 120,
+            "voltageV": 450,
+            "currentA": 255,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type2CableAttached",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "m-AMscPwZDA9LxD0ic5p0A",
+      "score": 97.4563903809,
+      "dist": 2543.61642,
+      "info": "search:ev:a0997134-2045-3a9d-54c2-981200153b86",
+      "poi": {
+        "name": "อีแวท",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "municipalitySubdivision": "บางซื่อ",
+        "municipality": "กรุงเทพมหานคร",
+        "municipalitySecondarySubdivision": "วงศ์สว่าง",
+        "countrySecondarySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivisionName": "กรุงเทพมหานคร",
+        "countrySubdivisionCode": "10",
+        "postalCode": "10800",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "ตำบล/แขวงบางซื่อ อำเภอ/เขตวงศ์สว่าง กรุงเทพมหานคร 10800",
+        "localName": "วงศ์สว่าง"
+      },
+      "position": {
+        "lat": 13.82166,
+        "lon": 100.514204
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.82256,
+          "lon": 100.51328
+        },
+        "btmRightPoint": {
+          "lat": 13.82076,
+          "lon": 100.51513
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "Chademo",
+            "ratedPowerKW": 50,
+            "voltageV": 400,
+            "currentA": 125,
+            "currentType": "DC"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "4kg1i1M0sUx9Q5ql0R4gag",
+      "score": 97.209777832,
+      "dist": 2790.226639,
+      "info": "search:ev:2d92d8b8-29d8-30b0-7dd4-d3b200153b86",
+      "poi": {
+        "name": "อีวี สเตชั่น พลัส",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "160/6",
+        "streetName": "ถนนนนทบุรี 1",
+        "municipalitySubdivision": "สวนใหญ่",
+        "municipality": "นนทบุรี",
+        "countrySecondarySubdivision": "อำเภอ เมืองนนทบุรี",
+        "countrySubdivision": "จังหวัด นนทบุรี",
+        "countrySubdivisionName": "จังหวัด นนทบุรี",
+        "countrySubdivisionCode": "12",
+        "postalCode": "11000",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "160/6, ถนนนนทบุรี 1, ตำบล/แขวงสวนใหญ่ อำเภอ/เขตสวนใหญ่ จังหวัด นนทบุรี 11000",
+        "localName": "สวนใหญ่"
+      },
+      "position": {
+        "lat": 13.850258,
+        "lon": 100.49069
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.85116,
+          "lon": 100.48976
+        },
+        "btmRightPoint": {
+          "lat": 13.84936,
+          "lon": 100.49162
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 120,
+            "voltageV": 450,
+            "currentA": 255,
+            "currentType": "DC"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "4xp-xZs9LID4GA48g8OHRw",
+      "score": 96.733757019,
+      "dist": 3266.246117,
+      "info": "search:ev:119e0627-e69c-38b5-f322-df1600153b86",
+      "poi": {
+        "name": "อีเอ เอนนี่แวร์",
+        "phone": "+66 2 026 6133",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "1399",
+        "streetName": "ถนนประชาราษฎร์ สาย 1",
+        "municipalitySubdivision": "บางซื่อ",
+        "municipality": "กรุงเทพมหานคร",
+        "municipalitySecondarySubdivision": "วงศ์สว่าง",
+        "countrySecondarySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivisionName": "กรุงเทพมหานคร",
+        "countrySubdivisionCode": "10",
+        "postalCode": "10800",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "1399, ถนนประชาราษฎร์ สาย 1, ตำบล/แขวงบางซื่อ อำเภอ/เขตวงศ์สว่าง กรุงเทพมหานคร 10800",
+        "localName": "วงศ์สว่าง"
+      },
+      "position": {
+        "lat": 13.815106,
+        "lon": 100.515819
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.81601,
+          "lon": 100.51489
+        },
+        "btmRightPoint": {
+          "lat": 13.81421,
+          "lon": 100.51675
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2Outlet",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          },
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 90,
+            "voltageV": 450,
+            "currentA": 200,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type2CableAttached",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "fNLymN6DvPJX1vdFy6NSuQ",
+      "score": 96.7005157471,
+      "dist": 3299.485715,
+      "info": "search:ev:a7d73634-ea7a-3c9d-23ea-8f0b00153b86",
+      "poi": {
+        "name": "ชาร์จนาว",
+        "phone": "+66 91 120 7267",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "562, 566",
+        "streetName": "ถนนรัตนาธิเบศร์",
+        "municipalitySubdivision": "บางกระสอ",
+        "municipality": "นนทบุรี",
+        "countrySecondarySubdivision": "อำเภอ เมืองนนทบุรี",
+        "countrySubdivision": "จังหวัด นนทบุรี",
+        "countrySubdivisionName": "จังหวัด นนทบุรี",
+        "countrySubdivisionCode": "12",
+        "postalCode": "11000",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "562, 566, ถนนรัตนาธิเบศร์, ตำบล/แขวงบางกระสอ อำเภอ/เขตบางกระสอ จังหวัด นนทบุรี 11000",
+        "localName": "บางกระสอ"
+      },
+      "position": {
+        "lat": 13.866703,
+        "lon": 100.495588
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.8676,
+          "lon": 100.49466
+        },
+        "btmRightPoint": {
+          "lat": 13.8658,
+          "lon": 100.49651
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2Outlet",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "7BvAh7HQMe7-5YWIq5Gi8Q",
+      "score": 96.4005889893,
+      "dist": 3599.414266,
+      "info": "search:ev:bf3f2193-998e-337b-259b-280200153b86",
+      "poi": {
+        "name": "อิเล็กซ์บายอีแกท",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "53",
+        "streetName": "ถนนจรัญสนิทวงศ์",
+        "municipality": "บางกรวย",
+        "countrySecondarySubdivision": "อำเภอ บางกรวย",
+        "countrySubdivision": "จังหวัด นนทบุรี",
+        "countrySubdivisionName": "จังหวัด นนทบุรี",
+        "countrySubdivisionCode": "12",
+        "postalCode": "11130",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "53, ถนนจรัญสนิทวงศ์, อำเภอ/เขตบางกรวย จังหวัด นนทบุรี 11130",
+        "localName": "บางกรวย"
+      },
+      "position": {
+        "lat": 13.812359,
+        "lon": 100.511711
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.81326,
+          "lon": 100.51078
+        },
+        "btmRightPoint": {
+          "lat": 13.81146,
+          "lon": 100.51264
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type2Outlet",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          },
+          {
+            "connectorType": "IEC62196Type2CCS",
+            "ratedPowerKW": 90,
+            "voltageV": 450,
+            "currentA": 200,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type2CableAttached",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          },
+          {
+            "connectorType": "Chademo",
+            "ratedPowerKW": 50,
+            "voltageV": 400,
+            "currentA": 125,
+            "currentType": "DC"
+          },
+          {
+            "connectorType": "IEC62196Type1",
+            "ratedPowerKW": 7,
+            "voltageV": 230,
+            "currentA": 32,
+            "currentType": "AC1"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "thQL1_cU-NUWJlNJrC90VA",
+      "score": 96.0868530273,
+      "dist": 3913.141403,
+      "info": "search:ev:95cb90a6-7f13-3c37-e933-a28e00153b86",
+      "poi": {
+        "name": "อีเอ เอนนี่แวร์",
+        "phone": "+66 2 026 6133",
+        "categorySet": [
+          {
+            "id": 7309
+          }
+        ],
+        "categories": [
+          "electric vehicle station"
+        ],
+        "classifications": [
+          {
+            "code": "ELECTRIC_VEHICLE_STATION",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "electric vehicle station"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "149/73",
+        "streetName": "ซอยงามวงศ์วาน 43",
+        "municipalitySubdivision": "หลักสี่",
+        "municipality": "กรุงเทพมหานคร",
+        "municipalitySecondarySubdivision": "ทุ่งสองห้อง",
+        "countrySecondarySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivision": "กรุงเทพมหานคร",
+        "countrySubdivisionName": "กรุงเทพมหานคร",
+        "countrySubdivisionCode": "10",
+        "postalCode": "10210",
+        "countryCode": "TH",
+        "country": "ประเทศไทย",
+        "countryCodeISO3": "THA",
+        "freeformAddress": "149/73, ซอยงามวงศ์วาน 43, ตำบล/แขวงหลักสี่ อำเภอ/เขตทุ่งสองห้อง กรุงเทพมหานคร 10210",
+        "localName": "ทุ่งสองห้อง"
+      },
+      "position": {
+        "lat": 13.859551,
+        "lon": 100.548594
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 13.86045,
+          "lon": 100.54767
+        },
+        "btmRightPoint": {
+          "lat": 13.85865,
+          "lon": 100.54952
+        }
+      },
+      "chargingPark": {
+        "connectors": [
+          {
+            "connectorType": "IEC62196Type1",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          },
+          {
+            "connectorType": "IEC62196Type2CableAttached",
+            "ratedPowerKW": 22,
+            "voltageV": 400,
+            "currentA": 32,
+            "currentType": "AC3"
+          }
+        ]
+      }
+    }
+  ]
+}
