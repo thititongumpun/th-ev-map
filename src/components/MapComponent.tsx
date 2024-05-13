@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Map, {
   Marker,
   GeolocateControl,
@@ -28,8 +28,18 @@ function MapComponent({ lat, lng }: Props) {
     zoom: 14,
   });
 
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setViewport({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+        zoom: 14,
+      });
+    });
+  });
+
   const { data } = useQuery("stations", () =>
-    getStations({ lat: lat as number, lng: lng as number })
+    getStations({ lat: viewState.latitude, lng: viewState.longitude })
   );
 
   const [popupInfo, setPopupInfo] = useState<Result | null>(null);

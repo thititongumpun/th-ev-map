@@ -2,7 +2,6 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import { socket } from "./socket";
 import ConnectionManager from "./ConnectionManager";
 import { useGeolocation } from "@uidotdev/usehooks";
-// import { LatLng } from "./types/LatLng";
 import { Button } from "@mui/material";
 import toast from "react-hot-toast";
 import { useUserLocationContext } from "./hooks/useUserLocationContext";
@@ -22,17 +21,7 @@ function App() {
     maximumAge: 0,
   });
 
-  // const [latLng, setLatLng] = useState<LatLng[]>([
-  //   {
-  //     lat: latitude,
-  //     lng: longitude,
-  //   },
-  // ]);
-
   useEffect(() => {
-    // if (!loading) {
-    //   setLatLng([{ lat: latitude, lng: longitude }]);
-    // }
 
     function onConnect() {
       setIsConnected(true);
@@ -57,7 +46,9 @@ function App() {
       socket.off("disconnect", onDisconnect);
       // socket.on("off", onLocationEvent);
     };
-  }, [latitude, loading, longitude]);
+  }, [latitude, longitude]);
+
+  if (loading) return <LoadingSkelation loading />
 
   return (
     <>
@@ -79,11 +70,19 @@ function App() {
       >
         Send Location
       </Button>
-      <Suspense fallback={<LoadingSkelation loading />}>
-        <MapComponent lat={latitude as number} lng={longitude as number} />
-      </Suspense>
       <BrowserRouter>
         <Routes>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<LoadingSkelation loading={true} />}>
+                <MapComponent
+                  lat={latitude as number}
+                  lng={longitude as number}
+                />
+              </Suspense>
+            }
+          />
           <Route path="/xd" element={<LoadingSkelation loading={true} />} />
         </Routes>
       </BrowserRouter>
