@@ -137,7 +137,7 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0, display: "flex" }}>
             <Battery
               level={`${(level! * 100).toFixed(0)} %`}
               charging={charging}

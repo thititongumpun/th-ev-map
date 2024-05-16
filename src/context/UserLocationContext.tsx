@@ -1,5 +1,4 @@
 import React from "react";
-// import { UserLocation } from "../types/UserLocation";
 import { User, useAuth0 } from "@auth0/auth0-react";
 
 export const UserLocationContext = React.createContext<User | null>(null);

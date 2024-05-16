@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useUserLocationContext } from "./hooks/useUserLocationContext";
 import LoadingSkelation from "./components/LoadingSkelation";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
 
 const MapComponent = lazy(() => import("./components/MapComponent"));
 const ResponsiveAppBar = lazy(() => import("./components/Navbar"));
@@ -22,7 +23,6 @@ function App() {
   });
 
   useEffect(() => {
-
     function onConnect() {
       setIsConnected(true);
       toast.success("Successfully connected");
@@ -48,7 +48,7 @@ function App() {
     };
   }, [latitude, longitude]);
 
-  if (loading) return <LoadingSkelation loading />
+  if (loading) return <LoadingSkelation loading />;
 
   return (
     <>
@@ -83,7 +83,9 @@ function App() {
               </Suspense>
             }
           />
-          <Route path="/xd" element={<LoadingSkelation loading={true} />} />
+          <Route path="/pv" element={<PrivateRoute />}>
+            <Route path="/pvxd" element={<LoadingSkelation loading={true} />} />≈
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

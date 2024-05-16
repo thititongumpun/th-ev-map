@@ -39,7 +39,7 @@ export default function Battery({
               {chargingTime ? chargingTime === 0 : null}
             </Typography>
           ) : (
-            <Typography>{dischargingTime}</Typography>
+            <Typography>{dischargingTime === 0 ? dischargingTime : null}</Typography>
           )}
         </>
       )}
